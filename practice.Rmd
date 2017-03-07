@@ -14,10 +14,10 @@ library(ggplot2)
 
 This is an R Markdown document. 
 
-```{r gap2007}
+```{r gap1952}
 gapminder <- read.csv("https://stat.duke.edu/~mc301/data/gapminder.csv")
 gap07 <- gapminder %>%
-  filter(year == 2007)
+  filter(year == 1952)
 ```
 
 ## Including Plots
@@ -25,8 +25,8 @@ gap07 <- gapminder %>%
 You can also embed plots, for example:
 
 ```{r gapplots, echo=FALSE}
-qplot(x = gdpPercap, y = lifeExp, data = gap07)
-qplot(x = gdpPercap, y = lifeExp, color = continent, data = gap07)
+qplot(x = pop, y = lifeExp, data = gap07)
+qplot(x = pop, y = lifeExp, color = continent, size = gdpPercap, data = gap07)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
