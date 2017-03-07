@@ -7,3 +7,5 @@ A different change than on github
 Another change from within RStudio
 
 Yet another change from RStudio
+
+Yet another change from GitHub
