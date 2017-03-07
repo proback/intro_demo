@@ -1,0 +1,32 @@
+---
+title: "practice.Rmd"
+author: "Paul Roback"
+date: "March 7, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(dplyr)
+library(ggplot2)
+```
+
+## R Markdown
+
+This is an R Markdown document. 
+
+```{r gap2007}
+gapminder <- read.csv("https://stat.duke.edu/~mc301/data/gapminder.csv")
+gap07 <- gapminder %>%
+  filter(year == 2007)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r gapplots, echo=FALSE}
+qplot(x = gdpPercap, y = lifeExp, data = gap07)
+qplot(x = gdpPercap, y = lifeExp, color = continent, data = gap07)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
